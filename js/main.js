@@ -1,4 +1,6 @@
-$(function() {
+// Old phone-friendly menu, jquery required
+
+/*$(function() {
   menu = $("nav ul");
   $("#toggle-btn").on("click", function(e) {
     e.preventDefault();
@@ -23,3 +25,4 @@ $(function() {
 
   $(".open-menu").height($(window).height());
 });
+*/
