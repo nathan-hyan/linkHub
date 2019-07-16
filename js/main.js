@@ -1,28 +1,13 @@
-// Old phone-friendly menu, jquery required
+let navBar = document.querySelector("nav");
 
-/*$(function() {
-  menu = $("nav ul");
-  $("#toggle-btn").on("click", function(e) {
-    e.preventDefault();
-    menu.slideToggle();
-  });
+window.onscroll = function() {
+  console.log(window.pageYOffset);
 
-  $(window).resize(function() {
-    var w = $(this).width();
-
-    if (w > 580 && menu.is(":hidden")) {
-      menu.removeAttr("style");
-      ç;
-    }
-  });
-
-  $("nav li").on("click", function(e) {
-    var w = $(window).width();
-    if (w < 580) {
-      menu.slideToggle();
-    }
-  });
-
-  $(".open-menu").height($(window).height());
-});
-*/
+  if (window.pageYOffset < 500) {
+    navBar.style.background = "transparent";
+    console.log("down");
+  } else {
+    navBar.style.background = "rgba(12, 15, 10, 0.6)";
+    console.log("up");
+  }
+};
