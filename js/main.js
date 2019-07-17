@@ -1,4 +1,14 @@
 let navBar = document.querySelector("nav");
+let mailInput = document.querySelector(".mailInput");
+let notify = document.querySelector(".notify");
+
+notify.addEventListener("click", function() {
+  if (mailInput.value.length > 5) {
+    console.log("valido xd");
+  } else {
+    console.log("a webo");
+  }
+});
 
 window.onscroll = function() {
   console.log(window.pageYOffset);

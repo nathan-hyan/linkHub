@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web&display=swap");
 html {
   scroll-behavior: smooth;
   -ms-scroll-snap-type: y mandatory;
@@ -10,7 +12,6 @@ html button {
   margin: 18px 0;
   padding: 20px 40px;
   background: #114253;
-  font-family: "Montserrat";
   color: #f3f1f0;
   letter-spacing: 2px;
   font-weight: 800;
@@ -26,7 +27,7 @@ html button:hover {
 }
 
 body {
-  font-family: "Montserrat";
+  font-family: "Raleway";
   background: #0c0f0a;
 }
 
@@ -87,11 +88,10 @@ nav a#toggle-btn {
 }
 
 .container {
-  max-width: 1200px;
   height: 100vh;
   text-align: center;
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: 0 5rem;
   color: #f3f1f0;
 }
 
@@ -136,7 +136,7 @@ nav a#toggle-btn {
   width: 100%;
 }
 
-.section-hero {
+#home {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(12, 15, 10, 0.2)), to(#0c0f0a)), url("https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80") fixed no-repeat;
   background: linear-gradient(to bottom, rgba(12, 15, 10, 0.2), #0c0f0a), url("https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80") fixed no-repeat;
   background-size: cover;
@@ -146,20 +146,26 @@ nav a#toggle-btn {
   overflow-y: hidden;
 }
 
-.section-hero .container {
+#home .container {
   margin-top: 34vh;
 }
 
-.section-hero h1 {
-  font-size: 7em;
-  letter-spacing: 0.3em;
+#home .logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
-.section-hero h1 span {
-  color: #19647e;
+#home .logo img {
+  width: 80%;
+  height: auto;
+  margin-bottom: 1em;
 }
 
-.section-hero h2 {
+#home h2 {
+  font-family: "Titillium Web", sans-serif;
   font-weight: bold;
   color: #a4948d;
   font-size: 1em;
@@ -168,27 +174,26 @@ nav a#toggle-btn {
 }
 
 #overview {
-  padding-top: 35vh;
-}
-
-#overview .overview-content {
   display: -ms-grid;
   display: grid;
   grid-gap: 50px;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: left;
 }
 
-#overview .overview-content i {
+#overview i {
   font-size: 0.8em;
 }
 
-#overview .overview-content p {
+#overview p {
   margin-left: 1em;
 }
 
-#overview .overview-content img {
+#overview img {
   border-radius: 30px;
 }
 
@@ -220,9 +225,6 @@ nav a#toggle-btn {
 
 #features {
   text-shadow: 0px 0px 6px black;
-}
-
-#features .flexContainer {
   width: 100vw;
   height: 100vh;
   display: -webkit-box;
@@ -239,31 +241,31 @@ nav a#toggle-btn {
   background-size: cover;
 }
 
-#features .flexContainer .item {
+#features .item {
   text-align: center;
   color: #f3f1f0;
   padding: 1em;
   width: 23%;
 }
 
-#features .flexContainer .item h4 {
+#features .item h4 {
   font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 1em;
 }
 
-#features .flexContainer .item h4 i {
+#features .item h4 i {
   color: #a8dcee;
   font-size: 3em;
   display: block;
   margin-bottom: 10px;
 }
 
-#features .flexContainer .item p {
+#features .item p {
   margin-bottom: 2em;
 }
 
-#features .flexContainer .item button {
+#features .item button {
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
@@ -399,6 +401,12 @@ footer .rightFootSide ul a {
   text-transform: lowercase;
   line-height: 2em;
   font-size: 12px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+footer .rightFootSide ul a:hover {
+  color: #19647e;
 }
 
 footer .bottomFootSide {
