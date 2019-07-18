@@ -82,6 +82,10 @@ nav .desktop li {
   display: inline;
 }
 
+nav .desktop li a {
+  margin: 1em 5em;
+}
+
 nav .mobile {
   display: none;
 }
