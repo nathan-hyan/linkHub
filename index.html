@@ -26,22 +26,38 @@
 
   <body>
     <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#overview">Overview</a></li>
-        <li><a href="#coop">Co-op</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#subscribe">Subscribe</a></li>
-      </ul>
+      <a href="#" class="btn"><i class="fas fa-bars"></i></a>
 
-      <a href="#" id="toggle-btn">Invoxet</a>
+      <div class="desktop">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#coop">Co-op</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#subscribe">Subscribe</a></li>
+        </ul>
+      </div>
+
+      <div class="mobile">
+        <div class="hamburgerMenu">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#coop">Multiplayer</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#subscribe">Subscribe</a></li>
+          </ul>
+
+          <img src="./src/logo_small.png" alt="Invoxet logo" />
+        </div>
+      </div>
     </nav>
 
     <main>
       <!-- Landing -->
 
       <section id="home" class="container scrollSnap">
-        <div class="logo">
+        <div class="center">
           <img src="./src/logo.png" alt="Invoxet Logo" class="anim" />
           <h2 class="anim">games at your fingertips</h2>
         </div>
@@ -88,18 +104,20 @@
       <!--Co-op section-->
 
       <section id="coop" class="container scrollSnap">
-        <i class="fas fa-globe-americas anim"></i>
-        <h2 class="anim">Enhanced & Cross-platform multiplayer</h2>
-        <h3 class="anim">Call your friends, it't time to play</h3>
-        <hr />
-        <p class="anim">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
-          dignissimos, debitis itaque sit voluptatem provident sunt porro
-          maiores officiis nulla voluptates dolor corrupti odio, id, dolorem
-          quod quaerat animi fuga!
-        </p>
+        <div class="center">
+          <i class="fas fa-globe-americas anim"></i>
+          <h2 class="anim">Enhanced & Cross-platform multiplayer</h2>
+          <h3 class="anim">Call your friends, it's time to play</h3>
+          <hr />
+          <p class="anim">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
+            dignissimos, debitis itaque sit voluptatem provident sunt porro
+            maiores officiis nulla voluptates dolor corrupti odio, id, dolorem
+            quod quaerat animi fuga!
+          </p>
 
-        <button class="anim">Read More</button>
+          <button class="anim">Read More</button>
+        </div>
       </section>
 
       <!-- Features -->
@@ -166,33 +184,31 @@
       <!-- Subscribe -->
 
       <section id="subscribe" class="scrollSnap">
-        <h2 class="anim">Subscribe to our newsletter</h2>
-        <p class="anim">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-          quasi, aperiam in ex maiores assumenda? Voluptas fugiat iste officia
-          incidunt consequatur molestiae ipsa, nobis, eos est unde, quia itaque
-          accusamus?
-        </p>
+        <div class="center">
+          <h2 class="">Subscribe to our newsletter</h2>
+          <p class="">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            quasi, aperiam in ex maiores assumenda? Voluptas fugiat iste officia
+            incidunt consequatur molestiae ipsa, nobis, eos est unde, quia
+            itaque accusamus?
+          </p>
 
-        <br />
+          <br />
 
-        <input
-          type="text"
-          placeholder="Enter you Email"
-          class="mailInput anim"
-        />
+          <input type="text" placeholder="Enter you Email" class="mailInput" />
 
-        <button type="button" class="notify anim">Notify Me!</button>
+          <button type="button" class="notify ">Notify Me!</button>
+        </div>
       </section>
     </main>
 
-    <footer>
-      <div class="leftFootSide anim">
+    <footer class="scrollSnap">
+      <div class="leftFootSide ">
         <img src="./src/logo_small.png" alt="Logo" height="20" />
         <h2>location, placeholder 250.</h2>
       </div>
 
-      <div class="rightFootSide anim">
+      <div class="rightFootSide ">
         <h1>Follow us!</h1>
 
         <ul>
@@ -211,7 +227,7 @@
         </ul>
       </div>
 
-      <div class="bottomFootSide anim">
+      <div class="bottomFootSide ">
         <img src="./src/hyanlogo.png" alt="" height="30" />
         <p>Designed and programmed by Hy-An Multimedia Group.</p>
       </div>
@@ -219,7 +235,12 @@
     <script src="./js/main.js"></script>
     <script type="text/javascript">
       window.sr = ScrollReveal();
-      sr.reveal(".anim", { delay: 55, interval: 50, reset: true });
+      sr.reveal(".anim", {
+        delay: 55,
+        interval: 50,
+        reset: true,
+        mobile: false
+      });
     </script>
   </body>
 </html>

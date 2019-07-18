@@ -40,31 +40,13 @@ body {
 }
 
 nav {
-  height: 60px;
-  width: 100%;
-  position: fixed;
-  overflow: hidden;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-nav ul {
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-
-nav li {
-  display: inline;
+  z-index: 9999;
 }
 
 nav a {
   display: inline-block;
-  width: 100px;
   font-weight: 400;
   text-decoration: none;
-  padding: 20px 0;
-  margin: 0 5em;
   color: #f3f1f0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -75,8 +57,39 @@ nav a:hover {
   color: #19647e;
 }
 
-nav a#toggle-btn {
+nav a i {
+  padding: 20px;
+  background: rgba(12, 15, 10, 0.9);
+  border-radius: 0px 0px 30px 0px;
+}
+
+nav .desktop {
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+nav .desktop ul {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+nav .desktop li {
+  display: inline;
+}
+
+nav .mobile {
   display: none;
+}
+
+nav .btn {
+  display: none;
+  position: fixed;
+  z-index: 999;
 }
 
 .solid {
@@ -136,6 +149,14 @@ nav a#toggle-btn {
   width: 100%;
 }
 
+.center {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 #home {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(12, 15, 10, 0.2)), to(#0c0f0a)), url("https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80") fixed no-repeat;
   background: linear-gradient(to bottom, rgba(12, 15, 10, 0.2), #0c0f0a), url("https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80") fixed no-repeat;
@@ -150,20 +171,6 @@ nav a#toggle-btn {
   margin-top: 34vh;
 }
 
-#home .logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-#home .logo img {
-  width: 80%;
-  height: auto;
-  margin-bottom: 1em;
-}
-
 #home h2 {
   font-family: "Titillium Web", sans-serif;
   font-weight: bold;
@@ -171,6 +178,12 @@ nav a#toggle-btn {
   font-size: 1em;
   letter-spacing: 1em;
   margin-bottom: 3em;
+}
+
+#home img {
+  width: 80%;
+  height: auto;
+  margin-bottom: 1em;
 }
 
 #overview {
@@ -198,7 +211,6 @@ nav a#toggle-btn {
 }
 
 #coop {
-  padding-top: 28vh;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url("https://images.unsplash.com/10/wii.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80") fixed no-repeat;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://images.unsplash.com/10/wii.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80") fixed no-repeat;
   background-size: cover;
@@ -270,11 +282,9 @@ nav a#toggle-btn {
       align-self: flex-end;
 }
 
-/* Subscribe Section */
 #subscribe {
   height: 50vh;
   background: #0c0f0a;
-  padding: 8rem 0;
   text-align: center;
 }
 
@@ -287,10 +297,6 @@ nav a#toggle-btn {
   color: white;
   margin-top: 1em;
   padding: 0 3em;
-}
-
-#subscribe br {
-  margin: 2em 0;
 }
 
 #subscribe input {
@@ -345,7 +351,6 @@ nav a#toggle-btn {
   margin-left: -6px;
 }
 
-/* footer */
 footer {
   height: auto;
   background-color: #0c0f0a;
@@ -426,84 +431,128 @@ footer .bottomFootSide img {
   margin-left: 3px;
 }
 
-/* Responsive */
+/*
+==================================
+=         Responsiveness         =
+==================================
+*/
 @media screen and (max-width: 580px) {
+  nav {
+    height: auto;
+    position: fixed;
+  }
+  nav .btn {
+    display: block;
+  }
+  nav .desktop {
+    display: none;
+  }
+  nav .mobile {
+    display: block;
+  }
+  nav .mobile a {
+    z-index: 2;
+    position: absolute;
+    color: #f3f1f0;
+    font-size: 1.3em;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    margin: 1em;
+    text-decoration: none;
+  }
+  nav .mobile a:hover {
+    color: #19647e;
+  }
+  nav .mobile .hamburgerMenu {
+    z-index: 1;
+    position: relative;
+    background: rgba(12, 15, 10, 0.9);
+    height: 100vh;
+    width: 300px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  nav .mobile .hamburgerMenu ul {
+    margin: 5em 1.5em;
+  }
+  nav .mobile .hamburgerMenu ul li {
+    margin-bottom: 2em;
+    letter-spacing: 3px;
+    font-size: 0.8em;
+    text-transform: lowercase;
+  }
+  nav .mobile .hamburgerMenu img {
+    max-width: 100px;
+    margin: 2.5em;
+  }
   .container {
     padding: 0 2rem;
   }
-  nav {
-    height: auto;
-    border-bottom: 0;
+  #home {
+    margin: 0;
   }
-  nav ul {
-    display: none;
-    height: auto;
-  }
-  nav li {
+  #home img {
     width: 100%;
-    float: left;
-    position: relative;
+    height: 100%;
   }
-  nav a {
-    text-align: left;
-    width: 100%;
-    text-indent: 25px;
-    background: var(--bgColorA);
-    color: var(--txtColorA);
+  #home h2 {
+    letter-spacing: 3px;
   }
-  nav a:hover {
-    color: var(--txtColorB);
-  }
-  nav a#toggle-btn:after {
-    content: "|||";
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
-    width: 40px;
-    height: 40px;
-    display: inline-block;
-    position: absolute;
-    right: 5px;
-    top: 20px;
-  }
-  nav a#toggle-btn {
+  #overview {
+    height: auto;
     display: block;
-    background: #1c2325;
-    color: var(--txtColorA);
-    width: 100%;
-    position: relative;
   }
-  .menu:before,
-  .menu:after {
-    content: "";
-    display: table;
+  #overview hr {
+    margin-bottom: 1em;
   }
-  .menu:after {
-    clear: both;
+  #overview p {
+    margin: 0 0 2em 0;
+    text-align: right;
+    line-height: 2em;
   }
-  .menu {
-    zoom: 1;
-  }
-  .section-hero h2 {
-    font-size: 24px;
-  }
-  .section-hero p {
+  #overview img {
     display: none;
   }
-  .overview-content {
-    display: -ms-grid;
-    display: grid;
-    grid-gap: 20px;
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
-    text-align: left;
+  #overview button {
+    margin-bottom: 2em;
   }
-  .features-content {
-    display: -ms-grid;
-    display: grid;
-    grid-gap: 20px;
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
+  #coop {
+    height: 1000px;
+  }
+  #coop i {
+    font-size: 5em;
+  }
+  #coop h2 {
+    font-size: 3.5em;
     text-align: left;
+    margin-bottom: 0.5em;
+  }
+  #coop h3 {
+    display: none;
+  }
+  #coop p {
+    line-height: 2.5em;
+  }
+  #features {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    padding: 3em 0;
+  }
+  #features .item {
+    width: 90%;
+    height: auto;
+  }
+  #subscribe {
+    height: 300px;
+  }
+  #subscribe h2 {
+    font-size: 1.5em;
+  }
+  #subscribe p {
+    display: none;
   }
 }
 /*# sourceMappingURL=main.css.map */
