@@ -57,14 +57,8 @@ nav a:hover {
   color: #19647e;
 }
 
-nav a i {
-  padding: 20px;
-  background: rgba(12, 15, 10, 0.9);
-  border-radius: 0px 0px 30px 0px;
-}
-
 nav .desktop {
-  height: 60px;
+  height: auto;
   width: 100%;
   position: fixed;
   overflow: hidden;
@@ -83,7 +77,7 @@ nav .desktop li {
 }
 
 nav .desktop li a {
-  margin: 1em 5em;
+  margin: 1em 3em;
 }
 
 nav .mobile {
@@ -440,10 +434,52 @@ footer .bottomFootSide img {
 =         Responsiveness         =
 ==================================
 */
-@media screen and (max-width: 580px) {
+@media (min-width: 520px) and (max-width: 850px) {
+  nav .desktop li a {
+    margin: 1em;
+    font-size: 0.8em;
+  }
+  #overview {
+    height: auto;
+    display: block;
+  }
+  #overview hr {
+    margin-bottom: 1em;
+  }
+  #overview p {
+    margin: 0 0 2em 0;
+    text-align: right;
+    line-height: 2em;
+  }
+  #overview img {
+    display: none;
+  }
+  #overview button {
+    margin-bottom: 2em;
+  }
+  #features {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    padding: 3em 0;
+  }
+  #features .item {
+    width: 90%;
+    height: auto;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 520px) {
   nav {
     height: auto;
     position: fixed;
+  }
+  nav i {
+    padding: 20px;
+    background: rgba(12, 15, 10, 0.9);
+    border-radius: 0px 0px 30px 0px;
   }
   nav .btn {
     display: block;
