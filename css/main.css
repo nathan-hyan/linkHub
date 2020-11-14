@@ -58,6 +58,7 @@ nav a:hover {
 }
 
 nav .desktop {
+  z-index: 9999;
   height: auto;
   width: 100%;
   position: fixed;
@@ -156,8 +157,8 @@ nav .btn {
 }
 
 #home {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(12, 15, 10, 0.2)), to(#0c0f0a)), url("https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80") fixed no-repeat;
-  background: linear-gradient(to bottom, rgba(12, 15, 10, 0.2), #0c0f0a), url("https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80") fixed no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(12, 15, 10, 0.2)), to(#0c0f0a)), url("../src/backgrounda.webp") fixed no-repeat;
+  background: linear-gradient(to bottom, rgba(12, 15, 10, 0.2), #0c0f0a), url("../src/backgrounda.webp") fixed no-repeat;
   background-size: cover;
   background-position: center center;
   width: 100%;
@@ -209,8 +210,8 @@ nav .btn {
 }
 
 #coop {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url("https://images.unsplash.com/10/wii.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80") fixed no-repeat;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://images.unsplash.com/10/wii.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80") fixed no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url("../src/backgroundb.webp") fixed no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../src/backgroundb.webp") fixed no-repeat;
   background-size: cover;
   background-position: center center;
   text-transform: lowercase;
@@ -246,8 +247,8 @@ nav .btn {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url("https://images.unsplash.com/photo-1486572788966-cfd3df1f5b42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80") fixed no-repeat;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://images.unsplash.com/photo-1486572788966-cfd3df1f5b42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80") fixed no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url("../src/backgroundc.webp") fixed no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../src/backgroundc.webp") fixed no-repeat;
   background-size: cover;
 }
 

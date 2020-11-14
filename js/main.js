@@ -1,9 +1,14 @@
 // Mail validation checking
 
-let notify = document.querySelector(".notify");
-notify.addEventListener("click", function() {
-  let mailInput = document.querySelector(".mailInput");
+const notify = document.querySelector(".notify");
+const navigationBar = document.querySelector(".desktop");
+const hamburguerButton = document.querySelector(".btn");
+const hamburguerMenu = document.querySelector(".hamburgerMenu");
+const mailInput = document.querySelector(".mailInput");
 
+const hidden = 1;
+
+notify.addEventListener("click", () => {
   if (
     mailInput.value.length == 0 ||
     String(mailInput.value).indexOf("@") === -1 ||
@@ -17,32 +22,30 @@ notify.addEventListener("click", function() {
 
 // Responsive desktop navbar
 
-let navBar = document.querySelector(".desktop");
-window.onscroll = function() {
-  if (window.pageYOffset < 500) {
-    navBar.style.background = "transparent";
-  } else {
-    navBar.style.background = "rgba(12, 15, 10, 0.6)";
-  }
+window.onscroll = () => {
+  window.pageYOffset < 500
+    ? (navigationBar.style.background = "transparent")
+    : (navigationBar.style.background = "rgba(12, 15, 10, 0.9)");
 };
 
 // Hamburguer mobile menu
 
-let hamBtn = document.querySelector(".btn");
-let hamMenu = document.querySelector(".hamburgerMenu");
-let hidden = 1;
-
-hamBtn.addEventListener("click", function(e) {
+hamburguerButton.addEventListener("click", (e) => {
   e.preventDefault();
 
   if (hidden === 1) {
-    console.log(hidden);
-    hamMenu.style.width = "300px";
+    hamburguerMenu.style.width = "300px";
     hidden = 0;
-    console.log(hidden);
   } else if (hidden === 0) {
-    hamMenu.style.width = "0px";
+    hamburguerMenu.style.width = "0px";
     hidden = 1;
-    console.log(hidden);
   }
+});
+
+window.sr = ScrollReveal();
+sr.reveal(".anim", {
+  delay: 55,
+  interval: 50,
+  reset: true,
+  mobile: false,
 });
