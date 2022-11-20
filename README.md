@@ -1,5 +1,7 @@
 # Invoxet - Gaming at your fingertips.
 
+ver. 2
+
 Landing page dedicated to video-games and e-sports. built using **HTML**, **SCSS** and **JavaScript.**
 
 ## Installation
